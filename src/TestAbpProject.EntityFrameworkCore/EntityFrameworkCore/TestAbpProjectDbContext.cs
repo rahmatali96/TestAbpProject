@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TestAbpProject.Demo;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -51,6 +52,7 @@ public class TestAbpProjectDbContext :
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
     #endregion
+    public DbSet<DemoClass> DemoClasses { get; set; }
 
     public TestAbpProjectDbContext(DbContextOptions<TestAbpProjectDbContext> options)
         : base(options)
